@@ -1,6 +1,6 @@
 # pages/dashboard.py
 import streamlit as st
-from ..api.client import APIClient
+from api.client import APIClient
 
 def dashboard_page():
     st.subheader("Dashboard")

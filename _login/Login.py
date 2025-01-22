@@ -24,6 +24,7 @@ def login_page():
                         data = response.json()
                         SessionManager.set_token(data["access_token"])
                         st.toast("Login successful! Redirecting to the dashboard...")
+                        st.rerun()
                     elif response.status_code == 404:
                         st.error("Invalid credentials or bad input.")
                     else:
